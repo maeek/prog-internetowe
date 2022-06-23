@@ -1,19 +1,19 @@
 version: '3'
 services:
-  # nginx:
-  #   build:
-  #     context: ./
-  #     dockerfile: ./production/web/Dockerfile
-  #   restart: unless-stopped
-  #   ports:
-  #     - 80:80
-  #   env_file:
-  #     - .env
-  #   depends_on:
-  #     - server
-  #   networks:
-  #     - frontend
-  #     - backend
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./production/web/Dockerfile
+    restart: unless-stopped
+    ports:
+      - 80:80
+    env_file:
+      - .env
+    depends_on:
+      - server
+    networks:
+      - frontend
+      - backend
 
   server:
     build:
