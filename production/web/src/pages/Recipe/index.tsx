@@ -105,7 +105,7 @@ export const Recipe = () => {
 
           <Title order={3}>Przepis</Title>
 
-          <Text sx={{ wordBreak: "break-all" }}>{recipe.description}</Text>
+          <Text sx={{ whiteSpace: "pre-wrap" }}>{recipe.description}</Text>
 
           <Title order={3}>Komentarze</Title>
 
