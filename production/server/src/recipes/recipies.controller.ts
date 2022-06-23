@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Logger,
   Param,
   Post,
   Put,
@@ -31,15 +32,14 @@ export class RecipeController {
     @Query('difficulty') difficulty?: string,
     @Query('author') author?: string,
   ) {
-    return this.recipesService.findAll(
+    const recipes = this.recipesService.findAll(
       type || difficulty || author ? { type, difficulty, author } : undefined,
       page,
       limit,
     );
-  }
 
-  // @Roles(Role.ADMIN)
-  // @UseGuards(JwtAuthGuard, RolesGuard)
+    return recipes;
+  }
 
   @Post()
   @UseGuards(JwtAuthGuard)

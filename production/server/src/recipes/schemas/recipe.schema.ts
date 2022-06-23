@@ -9,7 +9,7 @@ export type Comment = {
   addedAt: number;
 };
 
-export interface Ingridient {
+export interface Ingredient {
   name: string;
   amount: number;
   unit: string;
@@ -55,7 +55,7 @@ export class Recipe {
   preparationTime: number;
 
   @Prop()
-  ingridients: Ingridient[];
+  ingredients: Ingredient[];
 
   @Prop({ type: Number, default: Date.now() })
   createdAt: number;

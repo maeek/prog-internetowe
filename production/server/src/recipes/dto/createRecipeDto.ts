@@ -1,10 +1,10 @@
-import { Ingridient } from '../schemas/recipe.schema';
+import { Ingredient } from '../schemas/recipe.schema';
 
 export interface CreateRecipeDto {
   name: string;
   description: string;
   preparationTime: number;
-  ingridients: Ingridient[];
+  ingredients: Ingredient[];
   type: string;
   image: string;
   difficulty: string;

@@ -12,7 +12,7 @@ export class RecipesService {
       !recipe.name ||
       !recipe.description ||
       !recipe.preparationTime ||
-      !recipe.ingridients ||
+      !recipe.ingredients ||
       !recipe.type ||
       !recipe.difficulty
     ) {
@@ -40,9 +40,10 @@ export class RecipesService {
         name: recipe.name,
         description: recipe.description,
         preparationTime: recipe.preparationTime,
-        ingridients: recipe.ingridients,
+        ingredients: recipe.ingredients,
         type: recipe.type,
         difficulty: recipe.difficulty,
+        image: recipe.image,
         comments: recipe.comments,
         author: recipe.author,
         createdAt: recipe.createdAt,
@@ -58,9 +59,10 @@ export class RecipesService {
       name: recipe.name,
       description: recipe.description,
       preparationTime: recipe.preparationTime,
-      ingridients: recipe.ingridients,
+      ingredients: recipe.ingredients,
       type: recipe.type,
       difficulty: recipe.difficulty,
+      image: recipe.image,
       comments: recipe.comments,
       author: recipe.author,
       createdAt: recipe.createdAt,
