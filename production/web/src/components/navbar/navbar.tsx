@@ -15,7 +15,7 @@ const Navbar = ({ opened }: { opened?: boolean }) => {
 
   const items = [
     { path: '/', icon: <ListDetails size={16} />, color: 'teal', label: 'Katalog Przepisów' },
-    { path: '/recipes/add', icon: <Receipt size={16} />, color: 'green', label: 'Dodaj Przepis' },
+    { path: '/recipes/add', icon: <Receipt size={16} />, color: 'green', label: 'Dodaj Przepis', disabled: !isAuthenticated },
     { path: '/auth/login', icon: <Login size={16} />, color: 'blue', label: 'Zaloguj się', disabled: isAuthenticated },
     { path: '/auth/logout', icon: <Logout size={16} />, color: 'blue', label: 'Wyloguj się', disabled: !isAuthenticated },
   ];
